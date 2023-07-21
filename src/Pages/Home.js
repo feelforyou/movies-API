@@ -12,7 +12,7 @@ const Home = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "381428dafdmsh81ece4824a10633p1529e6jsn480b3c4a1837",
+        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
         "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
       },
     };
