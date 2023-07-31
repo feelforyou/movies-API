@@ -18,6 +18,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+/*chatgpt suggestions*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.navbar, .Home, .moviedetail-container {
+  width: 100%;
+}
+
+/* chatgpt suggestions end */
+
+
+
   img{
     display: block;
   }
