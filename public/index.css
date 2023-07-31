@@ -58,9 +58,7 @@ html, body {
     margin-bottom: 0rem;
     border-bottom: 0.1rem dashed white;
   }
-  .list-container {
-    position: relative;
-  }
+  
   .Link {
     text-decoration: none;
     color: white;
