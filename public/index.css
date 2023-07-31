@@ -14,6 +14,7 @@
   }
   
   body {
+    overflow-x: hidden; /*chatgpt, it was not this style*/
     font-family:  sans-serif,monospace, Arial, Helvetica; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -284,7 +285,7 @@ html, body {
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 1.5rem;
+      padding: 1rem; /*chatgpt, it was 1.5 rem*/
       
     }
     .moviedetail-card{
