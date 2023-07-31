@@ -53,7 +53,7 @@ html, body {
     justify-content: space-between;
     color: white;
     background-color: hsl(120, 87%, 18%);
-    padding: 1rem;
+    padding: 0rem; /*chatgpt suggestion*/
     margin-bottom: 0rem;
     border-bottom: 0.1rem dashed white;
   }
