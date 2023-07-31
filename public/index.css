@@ -51,7 +51,7 @@ html, body {
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: center; /*chatgpt suggestion, it was between*/
+    justify-content: space-around; /*chatgpt suggestion, it was between*/
     color: white;
     background-color: hsl(120, 87%, 18%);
     padding: 0rem; /*chatgpt suggestion*/
