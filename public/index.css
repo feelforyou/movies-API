@@ -117,7 +117,7 @@ html, body {
 
 .home-input {
   
-  min-width: 50vw;
+  min-width: 50%; /* chatgpt sugg. it was 50vw*/
   height: 1.85rem;
   color: #000;
   border: none;
@@ -226,6 +226,7 @@ html, body {
 
     /*|||||||| Movie detail page |||||||||| */
   .moviedetail-container{
+    box-sizing: border-box; /* chatgpt, it was no this style ever*/
     background-color: var(--BGCOLOR) ;
     display: flex;
     flex-direction: column;
