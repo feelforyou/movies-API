@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import noImage from "../Assets/noImage.png";
+import { movieList } from "./list";
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const [list, setList] = useState(movieList); ///// for css, and then switch to fetch!!!!!
 
   const fetchData = async () => {
     const url = `https://imdb8.p.rapidapi.com/auto-complete?q=${search}`;
@@ -42,9 +46,9 @@ const Home = () => {
   return (
     <div className="Home">
       <h1>Movies</h1>
-
-      <div className="searchpanel">
+      <div className="searchpanel1">
         <input
+          className="home-input"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
@@ -57,32 +61,57 @@ const Home = () => {
           Search
         </button>
       </div>
-      {isLoading && "Loading..."}
-      {error}
-      <section className="movie-container">
+
+      {isLoading && <div className="loader"></div>}
+      {error && error}
+
+      {/* new version here start!!!!!!! */}
+
+      <section className="section-container">
+        {movies?.map((movie) => {
+          const { id, l, i, rank, y } = movie;
+          const imageUrl = i?.imageUrl || noImage;
+
+          return (
+            <div className="card" key={id}>
+              <Link to={`/${id}`}>
+                <p className="card-title">
+                  {l || "No info"}
+                  {`(${y || "No Info"})`}
+                </p>
+                <img className="card-img" src={imageUrl} alt={l} />
+
+                <p className="rank">IMDB rank:{rank || "No info"}</p>
+              </Link>
+            </div>
+          );
+        })}
+      </section>
+      {/* <section className="movie-container">
         <ul className="ul-movies">
           {movies?.map((movie) => {
             const { id, l, i, rank, y } = movie;
-            const imageUrl = i?.imageUrl || "placeholder.jpg"; // Provide a placeholder image URL or a default value
+            const imageUrl = i?.imageUrl || noImage; // Provide a placeholder image URL or a default value
 
             return (
               <div className="movies" key={id}>
                 <li className="card">
                   <Link to={`/${id}`}>
-                    <p className="movie-title">{l}</p>
+                    <p className="movie-title">{l || "No info"}</p>
 
                     {imageUrl && (
                       <img height={300} width={250} src={imageUrl} alt={l} />
                     )}
-                    <p className="rank">rank:{rank}</p>
-                    <h3 className="year">year:{y}</h3>
+
+                    <p className="rank">rank:{rank || "No info"}</p>
+                    <h3 className="year">year:{y || "No info"}</h3>
                   </Link>
                 </li>
               </div>
             );
           })}
         </ul>
-      </section>
+      </section> */}
     </div>
   );
 };

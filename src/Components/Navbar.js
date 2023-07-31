@@ -7,6 +7,7 @@ const Navbar = () => {
       <Link to={"/"} className="Link">
         <h1>IMDB</h1>
       </Link>
+
       <div className="list-container">
         <ul className="ul">
           <li className="list-item">
