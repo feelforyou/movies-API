@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+/*chatgpt, it was not*/
+body::-webkit-scrollbar {.  
+  display: none;
+}
+
   
   a{
     text-decoration: none;
