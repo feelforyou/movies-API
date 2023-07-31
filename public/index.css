@@ -76,7 +76,7 @@ html, body {
     display: flex;
   
     justify-content: center;
-    width: 20rem;
+    max-width: 100% /*chatgpt, it was 20rem*/;
   }
   
   .list-item {
@@ -124,6 +124,7 @@ html, body {
 .home-input {
   
   min-width: 60%; /* chatgpt sugg. it was 50vw*/
+  max-width: 90%; /*chatgpt sugg , it was not*/
   height: 1.85rem;
   color: #000;
   border: none;
