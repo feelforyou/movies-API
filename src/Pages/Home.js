@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <h1>Movies</h1>
+      <h1>Explore Movie Database</h1>
       <div className="searchpanel1">
         <input
           className="home-input"
