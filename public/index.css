@@ -32,6 +32,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: var(--BGCOLOR);
 }
 .navbar, .Home, .moviedetail-container {
   width: 100%;
@@ -103,7 +104,7 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #000;
+    background-color: var(--BGCOLOR);
     min-height: 200vh;
     color: white;
     
