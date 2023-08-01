@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+/*chatgpt, it was not*/
+body::-webkit-scrollbar { 
+  display: none;
+}
+
   
   a{
     text-decoration: none;
@@ -14,10 +20,27 @@
   }
   
   body {
+    overflow-x: hidden; /*chatgpt, it was not this style*/
     font-family:  sans-serif,monospace, Arial, Helvetica; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+/*chatgpt suggestions*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.navbar, .Home, .moviedetail-container {
+  width: 100%;
+}
+
+/* chatgpt suggestions end */
+
+
+
   img{
     display: block;
   }
@@ -34,27 +57,28 @@
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /*chatgpt suggestion, it was between*/
     color: white;
     background-color: hsl(120, 87%, 18%);
-    padding: 1rem;
+    padding: 0.25rem 0rem; /*chatgpt suggestion*/
     margin-bottom: 0rem;
     border-bottom: 0.1rem dashed white;
   }
-  .list-container {
-    position: relative;
-  }
+  
   .Link {
     text-decoration: none;
     color: white;
+    margin-left: 1rem;
   }
   
   .navbar ul {
     list-style: none;
     display: flex;
-  
-    justify-content: center;
-    width: 20rem;
+    justify-content: space-between;
+    max-width: 100% /*chatgpt, it was 20rem*/;
+  }
+  .navbar ul :last-child{
+    border-right: none;
   }
   
   .list-item {
@@ -86,7 +110,7 @@
   }
   .Home h1{
     text-align: center;
-    padding-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   .searchpanel1 {
@@ -96,12 +120,15 @@
     justify-content: center;
     align-items: center;
     gap: 0.25rem;
+    
+    
 
 }
 
 .home-input {
   
-  min-width: 50vw;
+  min-width: 70%; /* chatgpt sugg. it was 50vw*/
+  max-width: 90%; /*chatgpt sugg , it was not*/
   height: 1.85rem;
   color: #000;
   border: none;
@@ -136,6 +163,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.5rem; /*chatgpt, it was not*/
   
 }
 
@@ -210,6 +238,7 @@
 
     /*|||||||| Movie detail page |||||||||| */
   .moviedetail-container{
+    box-sizing: border-box; /* chatgpt, it was no this style ever*/
     background-color: var(--BGCOLOR) ;
     display: flex;
     flex-direction: column;
@@ -267,7 +296,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 1.5rem;
+      padding: 1rem; /*chatgpt, it was 1.5 rem*/
       
     }
     .moviedetail-card{
@@ -302,7 +331,3 @@
   100% { transform: rotate(360deg); }
 }
   /* LOADER */
-
-
-
-
