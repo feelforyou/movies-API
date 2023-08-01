@@ -57,17 +57,10 @@ html, body {
     top: 0;
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     justify-content: space-between; /*chatgpt suggestion, it was between*/
     color: white;
     background-color: hsl(120, 87%, 18%);
     padding: 0.25rem 0rem; /*chatgpt suggestion*/
-=======
-    justify-content: space-around; /*chatgpt suggestion, it was between*/
-    color: white;
-    background-color: hsl(120, 87%, 18%);
-    padding: 0rem; /*chatgpt suggestion*/
->>>>>>> 9c309e4565fd7dfdb683e0398f4ff94c7e018229
     margin-bottom: 0rem;
     border-bottom: 0.1rem dashed white;
   }
@@ -81,17 +74,11 @@ html, body {
   .navbar ul {
     list-style: none;
     display: flex;
-<<<<<<< HEAD
     justify-content: space-between;
     max-width: 100% /*chatgpt, it was 20rem*/;
   }
   .navbar ul :last-child{
     border-right: none;
-=======
-  
-    justify-content: center;
-    max-width: 100% /*chatgpt, it was 20rem*/;
->>>>>>> 9c309e4565fd7dfdb683e0398f4ff94c7e018229
   }
   
   .list-item {
