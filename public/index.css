@@ -127,11 +127,7 @@ html, body {
 
 .home-input {
   
-<<<<<<< HEAD
   min-width: 70%; /* chatgpt sugg. it was 50vw*/
-=======
-  min-width: 60%; /* chatgpt sugg. it was 50vw*/
->>>>>>> 9c309e4565fd7dfdb683e0398f4ff94c7e018229
   max-width: 90%; /*chatgpt sugg , it was not*/
   height: 1.85rem;
   color: #000;
